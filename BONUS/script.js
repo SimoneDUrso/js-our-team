@@ -1,3 +1,10 @@
+// Funzione per la creazione dei div
+function createColumn() {
+    const col = document.createElement("div");
+    col.classList.add("col-12", "col-md-6", "col-lg-4")
+}
+
+
 // Creazione di un array di oggetti
 const team = [
 
