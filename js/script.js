@@ -35,4 +35,4 @@ const team = [
         ruolo: "Graphic Designer",
         foto: "barbara-ramos-graphic-designer.jpg"
     },
-]
+] 
