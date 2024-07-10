@@ -35,4 +35,9 @@ const team = [
         ruolo: "Graphic Designer",
         foto: "barbara-ramos-graphic-designer.jpg"
     },
-] 
+]
+
+for (i = 0; i < team.length; i++) {
+
+    console.log(team[i].nome, team[i].ruolo, team[i].foto)
+}
