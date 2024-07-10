@@ -37,7 +37,11 @@ const team = [
     },
 ]
 
-for (i = 0; i < team.length; i++) {
+const team_container = document.getElementById("team-container");
+
+for (let i = 0; i < team.length; i++) {
 
     console.log(team[i].nome, team[i].ruolo, team[i].foto)
+
+    team_container.innerHTML += `${team[i].nome} ${team[i].ruolo} ${team[i].foto} <br>`
 }
