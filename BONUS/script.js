@@ -2,6 +2,8 @@
 function createColumn() {
     const col = document.createElement("div");
     col.classList.add("col-12", "col-md-6", "col-lg-4")
+
+    return col
 }
 
 
@@ -50,7 +52,24 @@ const team_container = document.getElementById("team-container");
 
 for (let i = 0; i < team.length; i++) {
 
+    // Creo le colonne
+    let col = createColumn();
+
+    col.innerHTML = `
+                <div class="card my-3">
+                    <div class="card-img-top mb-3">
+                        <img src = "../img/${team[i].foto}" class="w-100">
+                    </div>
+    
+                    <div class="card-body p-3 text-center border border-secondary">
+                            <strong>${team[i].nome}</strong> <br> 
+                            ${team[i].ruolo}
+                    </div>
+                </div>`
+
+
     console.log(team[i].nome, team[i].ruolo, team[i].foto)
 
-    team_container.innerHTML += `${team[i].nome} ${team[i].ruolo} ${team[i].foto} <br>`
+    // Appendo le colonne al contenitore creato nell'HTML
+    team_container.append(col);
 }
